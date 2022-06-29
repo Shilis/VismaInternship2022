@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VismaInternship2022", "VismaInternship2022\VismaInternship2022.csproj", "{27BBB9CE-596A-4632-AE84-941E6EC09814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VismaInternship2022", "VismaInternship2022\VismaInternship2022.csproj", "{27BBB9CE-596A-4632-AE84-941E6EC09814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VismaInternship2022.UnitTests", "VismaInternship2022.UnitTests\VismaInternship2022.UnitTests.csproj", "{DE45AD13-81ED-4E6B-9A72-47836C76C1EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{27BBB9CE-596A-4632-AE84-941E6EC09814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BBB9CE-596A-4632-AE84-941E6EC09814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BBB9CE-596A-4632-AE84-941E6EC09814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE45AD13-81ED-4E6B-9A72-47836C76C1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE45AD13-81ED-4E6B-9A72-47836C76C1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE45AD13-81ED-4E6B-9A72-47836C76C1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE45AD13-81ED-4E6B-9A72-47836C76C1EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

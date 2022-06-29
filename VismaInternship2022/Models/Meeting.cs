@@ -24,7 +24,7 @@ namespace VismaInternship2022.Models
     public class Meeting
     {
         public Meeting(int id, string name, string description, Category category,
-                        Type type, DateTime startDate, DateTime endDate)
+                        Type type, DateTime startDate, DateTime endDate, User responsiblePerson)
         {
             Id = id;
             Name = name;
@@ -34,13 +34,12 @@ namespace VismaInternship2022.Models
             StartDate = startDate;
             EndDate = endDate;
             MeetingParticipants = new List<User>();
-            ResponsiblePerson = UserService.ActiveUser ?? throw new NullReferenceException();
-            MeetingParticipants.Add(ResponsiblePerson);
+            ResponsiblePerson = UserService.ActiveUser ?? responsiblePerson;
         }
 
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public User ResponsiblePerson { get; private set; }
+        public User ResponsiblePerson { get; set; }
         public string Description { get; private set; }
         public Category Category { get; private set; }
         public Type Type { get; private set; }

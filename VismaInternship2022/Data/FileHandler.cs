@@ -13,6 +13,9 @@ namespace VismaInternship2022.Data
         public ICollection<Meeting> Meetings { get; set; }
         public ICollection<User> Users { get; set;}
 
+        private string meetingsFile = "meetings.json";
+        private string usersFile = "users.json";
+
         public FileHandler()
         {
             Meetings = new List<Meeting>();
@@ -21,19 +24,19 @@ namespace VismaInternship2022.Data
 
         public void LoadData()
         {
-            if (!File.Exists("users.txt"))
-                File.Create("users.txt").Dispose();
+            if (!File.Exists(usersFile))
+                File.Create(usersFile).Dispose();
 
-            var users = File.ReadAllText("users.txt");
+            var users = File.ReadAllText(usersFile);
             var deserializedUsers = JsonConvert.DeserializeObject<List<User>>(users);
 
             if (deserializedUsers != null)
                 Users = deserializedUsers;
 
-            if (!File.Exists("meetings.txt"))
-                File.Create("meetings.txt").Dispose();
+            if (!File.Exists(meetingsFile))
+                File.Create(meetingsFile).Dispose();
 
-            var meetings = File.ReadAllText("meetings.txt");
+            var meetings = File.ReadAllText(meetingsFile);
             var deserializedMeetings = JsonConvert.DeserializeObject<List<Meeting>>(meetings);
 
             if (deserializedMeetings != null)
@@ -43,13 +46,13 @@ namespace VismaInternship2022.Data
         public void SaveMeetingsData()
         {
             var serializedMeetings = JsonConvert.SerializeObject(Meetings);
-            File.WriteAllText("meetings.txt", serializedMeetings);
+            File.WriteAllText(meetingsFile, serializedMeetings);
         }
 
         public void SaveUsersData()
         {
             var serializedUsers = JsonConvert.SerializeObject(Users);
-            File.WriteAllText("users.txt", serializedUsers);
+            File.WriteAllText(usersFile, serializedUsers);
         }
     }
 }
